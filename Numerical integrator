@@ -1,0 +1,38 @@
+import math
+
+#Подынтегральная функция
+def f(x):
+    return math.sin(x)
+
+#Подсчет интегральной суммы
+def integral(a, b, m):
+    x0=a #Начальное значение x
+    sum=0 #Переменная для хранения частичных сумм
+    dx=(b-a)/m #Ширина прямоугольника разбиения
+    #Суммирование площадей m прямоугольников
+    for i in range(m):
+        xn=x0+dx #Координата следующей точки x
+        xmid=(x0+xn)/2 #Точка внутри отрезка разбиения
+        sum+=f(xmid)*dx
+        x0=xn
+    print('The value of integral is', sum)
+
+while True:
+    try:
+        print('Do you want to find the value of definite integral?\n', 'Please, write YES or NO')
+        answer=input()
+        if answer=='YES':
+            print('Please, enter a value of the lower limit')
+            a=float(input())
+            print('Please, enter a value of the upper limit')
+            b=float(input())
+            print('Please, enter a positive integer number of segments')
+            m=int(input())
+            integral(a, b, m)
+        elif answer=='NO':
+            break
+        else:
+            raise Exception('Please, write YES or NO')
+    except Exception as e:
+        print(e)
+        continue
