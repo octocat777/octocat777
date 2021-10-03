@@ -4,7 +4,5 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
-<!---
-octocat777/octocat777 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+I try to make a numerical integration calculator.
+I appreciate any helpful advices that you can leave in "Guest's notes" file
